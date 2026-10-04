@@ -1,0 +1,9 @@
+.carousel {
+    padding: 0 4rem;
+}
+
+.card-base {
+    background: gray;
+    border-color: rgb(98, 98, 98);
+    border: 50px;
+}

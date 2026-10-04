@@ -1,0 +1,45 @@
+:root {
+    --bg-placeholder: 0, 85, 221;
+}
+
+.bg-container {
+    background-color: rgb(var(--bg-placeholder));
+
+}
+
+.bg-graphic {
+    position: fixed;
+    left: -5dvw;
+    top: -5dvh;
+    width: 110dvw;
+    height: 110dvh;
+    background-color: rgb(var(--bg-placeholder));
+    z-index: -1;
+}
+
+.bg-filter {
+    filter: blur(5px) brightness(0.7);
+}
+
+.content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100dvw;
+    z-index: 1;
+}
+
+@keyframes videoFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+.video-fade-in {
+    animation: videoFadeIn 1s cubic-bezier(0, 0.1, 0.5, 1);
+}

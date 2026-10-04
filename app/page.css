@@ -1,34 +1,55 @@
 body {
-    --debug-bg: 245, 134, 237;
-    background-image: linear-gradient(rgb(var(--debug-bg)));
-    background-color: black;
     /* background-image: linear-gradient(red); */
     /* debug end */
 }
 
 :root {
-    --landing-transparency: 0.3;
-    --about-transparency: 0.9;
-    --project-transparency: 0.7;
-    --contact-transparency: 0.5;
+    --debug: 245, 134, 237;
+
+    --opacity-landing: 0;
+    --opacity-about: 0.7;
+    --opacity-project: 0.5;
+    --opacity-contact: 0;
+
+    /* --color-primary: 4, 20, 58; */
+    --color-primary: rgb(0, 85, 221);
+    --color-secondary: rgb(97, 48, 156);
+    --color-tertiary: rgb(178, 34, 6);
+    --color-text-light: #eff1ea;
+    --color-text-dark: #313628;
+    /* 
+    background-image: url("/project-gifs/debug.gif");
+    background-size: cover; */
+
+    /* animation vars */
+    --anim-preset: 1s ease-out;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    padding: 1rem;
+    background: rgb(var(--debug));
 }
 
 #landing {
     display: flex;
     flex-direction: column;
     min-height: max(100dvh, 30rem);
-    background-color: rgba(0, 0, 0, var(--landing-transparency));
+    /* background-color: rgba(var(--color-primary), var(--opacity-landing)); */
+    /* background-color: rgba(0, 0, 0, var(--opacity-landing)); */
+    color: var(--color-text-light);
 }
 
-.hero {
+.hero-card {
+    margin-top: 20%;
     text-align: right;
-    /* align-items: right; */
+    /* background-color: var(--color-secondary); */
     padding-right: 10%;
 }
 
 #hero-header {
     font-size: 5rem;
-    padding-top: 20%;
 }
 
 #hero-subheader {
@@ -41,12 +62,10 @@ body {
 
 #gradient-buffer1 {
     height: 20rem;
-    background: linear-gradient(180deg, rgba(0, 0, 0, var(--landing-transparency)) 25%, rgba(0, 0, 0, var(--about-transparency)) 75%);
 }
 
 #about {
-    background-color: rgba(0, 0, 0, var(--about-transparency));
-    color: white;
+    color: var(--color-text-light);
 }
 
 #about-content {
@@ -58,8 +77,8 @@ body {
 }
 
 #photo-me {
-    background-color: rgb(var(--debug-bg));
-    margin: 0 0 0 12rem;
+    background-color: rgb(var(--debug));
+    margin: 0 12rem 0 0;
     min-width: 225px;
     min-height: 400px;
 }
@@ -72,27 +91,37 @@ body {
 
 #gradient-buffer2 {
     height: 10rem;
-    background: linear-gradient(180deg, rgba(0, 0, 0, var(--about-transparency)) 25%, rgba(0, 0, 0, var(--project-transparency)) 75%);
+    /* background: linear-gradient(180deg,
+            rgba(var(--color-primary), var(--opacity-about)) 25%,
+            rgba(var(--color-primary), var(--opacity-project)) 75%); */
 }
 
 #projects {
-    background-color: rgba(0, 0, 0, var(--project-transparency));
+    /* background-color: rgba(var(--color-primary), var(--opacity-project)); */
 }
 
 #gradient-buffer3 {
     height: 10rem;
-    background: linear-gradient(180deg, rgba(0, 0, 0, var(--project-transparency)) 25%, rgba(0, 0, 0, var(--contact-transparency)) 60%);
+    /* background: linear-gradient(180deg,
+            rgba(var(--color-primary), var(--opacity-project)) 25%,
+            rgba(var(--color-primary), var(--opacity-contact)) 60%); */
 }
 
 #contact {
-    background-color: rgba(0, 0, 0, var(--contact-transparency));
+    /* background-color: rgba(var(--color-primary), var(--opacity-contact)); */
+}
+
+footer {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--color-primary);
 }
 
 /* animations */
-@keyframes fadeInFromRight {
+@keyframes titleEnter {
     from {
         opacity: 0;
-        transform: translateX(5rem);
+        transform: translateX(50%);
     }
 
     to {
@@ -101,7 +130,40 @@ body {
     }
 }
 
-.fade-in-from-right {
+.title-enter {
     /* opacity: 0; */
-    animation: fadeInFromRight 1s ease-out
+    animation: titleEnter var(--anim-preset)
+}
+
+@keyframes aboutPhotoEnter {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+.about-photo-enter {
+    animation: aboutPhotoEnter var(--anim-preset)
+}
+
+@keyframes aboutTextEnter {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.about-text-enter {
+    animation: aboutTextEnter var(--anim-preset)
 }

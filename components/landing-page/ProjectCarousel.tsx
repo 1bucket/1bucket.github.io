@@ -1,4 +1,13 @@
 import {
+    Card,
+    CardAction,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card";
+import {
     Carousel,
     CarouselContent,
     CarouselItem,
@@ -6,26 +15,44 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"
 
-import ProjectCarouselCard from './ProjectCarouselCard';
-
 import './ProjectCarousel.css'
 
 export default function ProjectCarousel() {
-    return <div>
-        <Carousel>
+    return (
+        <Carousel className="carousel">
             <CarouselContent>
                 <CarouselItem className="basis-1/3">
-                    <ProjectCarouselCard>project dummy 1</ProjectCarouselCard>
+                    <Card className="card-base">
+                        <CardHeader>project 1</CardHeader>
+                        <CardContent>dummy</CardContent>
+                        <CardAction></CardAction>
+                    </Card>
                 </CarouselItem>
                 <CarouselItem className="basis-1/3">
-                    <ProjectCarouselCard>project dummy 2</ProjectCarouselCard>
+                    <Card className="card-base">
+                        <CardHeader>project 2</CardHeader>
+                        <CardContent>dummy</CardContent>
+                        <CardAction></CardAction>
+                    </Card>
                 </CarouselItem>
                 <CarouselItem className="basis-1/3">
-                    <ProjectCarouselCard>project dummy 3</ProjectCarouselCard>
+                    <Card className="card-base">
+                        <CardHeader>project 3</CardHeader>
+                        <CardContent>dummy</CardContent>
+                        <CardAction></CardAction>
+                    </Card>
+                </CarouselItem>
+                <CarouselItem className="basis-1/3">
+                    <Card className="card-base">
+                        <CardHeader>project 4</CardHeader>
+                        <CardContent>dummy</CardContent>
+                        <CardAction></CardAction>
+                    </Card>
                 </CarouselItem>
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
         </Carousel>
-    </div>
+    )
+
 }
