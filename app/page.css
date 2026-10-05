@@ -7,15 +7,16 @@ body {
     --debug: 245, 134, 237;
 
     --opacity-landing: 0;
-    --opacity-about: 0.7;
-    --opacity-project: 0.5;
-    --opacity-contact: 0;
 
     /* --color-primary: 4, 20, 58; */
     --color-primary: rgb(0, 85, 221);
-    --color-secondary: rgb(97, 48, 156);
-    --color-tertiary: rgb(178, 34, 6);
-    --color-text-light: #eff1ea;
+    --color-secondary: rgb(119, 182, 234);
+    --color-tertiary: rgb(147, 201, 213);
+    --color-quaternary: rgb(179, 222, 193);
+    --color-accent: rgb(165, 18, 77);
+    --color-border: rgb(0, 23, 61);
+
+    --color-text-light: #e7ecdd;
     --color-text-dark: #313628;
     /* 
     background-image: url("/project-gifs/debug.gif");
@@ -25,11 +26,13 @@ body {
     --anim-preset: 1s ease-out;
 }
 
-header {
+#header {
     position: fixed;
     width: 100%;
     padding: 1rem;
     background: rgb(var(--debug));
+    z-index: 2;
+    background-color: var(--color-secondary);
 }
 
 #landing {
@@ -60,12 +63,10 @@ header {
 
 #hero-to-about {}
 
-#gradient-buffer1 {
-    height: 20rem;
-}
-
 #about {
-    color: var(--color-text-light);
+    color: var(--color-text-dark);
+    background-color: var(--color-secondary);
+    border-color: var(--color-border);
 }
 
 #about-content {
@@ -89,32 +90,24 @@ header {
     flex-direction: column;
 }
 
-#gradient-buffer2 {
-    height: 10rem;
-    /* background: linear-gradient(180deg,
-            rgba(var(--color-primary), var(--opacity-about)) 25%,
-            rgba(var(--color-primary), var(--opacity-project)) 75%); */
+#skills {
+    background-color: var(--color-tertiary);
+    border-color: var(--color-border);
 }
 
 #projects {
-    /* background-color: rgba(var(--color-primary), var(--opacity-project)); */
-}
-
-#gradient-buffer3 {
-    height: 10rem;
-    /* background: linear-gradient(180deg,
-            rgba(var(--color-primary), var(--opacity-project)) 25%,
-            rgba(var(--color-primary), var(--opacity-contact)) 60%); */
+    background-color: var(--color-quaternary);
+    border-color: var(--color-border);
 }
 
 #contact {
-    /* background-color: rgba(var(--color-primary), var(--opacity-contact)); */
+    background-color: var(--color-tertiary);
+    border-color: var(--color-border);
 }
 
-footer {
-    width: 100%;
-    padding: 1rem;
-    background-color: var(--color-primary);
+#footer {
+    background-color: var(--color-secondary);
+    border-color: var(--color-border);
 }
 
 /* animations */

@@ -1,12 +1,16 @@
+'use client';
+
 import Background from '@/components/landing-page/Background';
 import ProjectCarousel from '@/components/landing-page/ProjectCarousel';
+
+import BlankTabSection, { BlankTabSectionType } from '@/components/custom/BlankTabSection';
 
 import './page.css'
 
 export default function LandingPage() {
   return (
     <Background>
-      <header>header stub</header>
+      <BlankTabSection id="header" sectionType={BlankTabSectionType.BOTTOM}>header stub</BlankTabSection>
       <section id="landing">
         <div className="hero-card title-enter">
           <div id="hero-header">Paul Enrade</div>
@@ -15,8 +19,7 @@ export default function LandingPage() {
           <div id="hero-to-about">to about me</div>
         </div>
       </section>
-      <div id="gradient-buffer1"></div>
-      <section id="about">
+      <BlankTabSection id="about" sectionType={BlankTabSectionType.TOP}>
         <div id="about-content">
           <div>
             <img id="photo-me" src={undefined} />
@@ -29,16 +32,24 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
-      </section>
-      <div id="gradient-buffer2"></div>
-      <section id="projects">
+      </BlankTabSection>
+      <BlankTabSection id="skills" sectionType={BlankTabSectionType.MIDDLE}>
+        <h2>Skills</h2>
+        My shiny collection of ever-evolving tools
+      </BlankTabSection>
+      <BlankTabSection id="projects" sectionType={BlankTabSectionType.MIDDLE}>
+        <h2>Projects</h2>
+        Things i’ve made, or otherwise helped make
         <ProjectCarousel />
-      </section>
-      <div id="gradient-buffer3"></div>
-      <section id="contact">
+      </BlankTabSection>
+      <BlankTabSection id="contact" sectionType={BlankTabSectionType.MIDDLE}>
         to contact me
-      </section>
-      <footer>header stub</footer>
+      </BlankTabSection>
+      <BlankTabSection id="footer" sectionType={BlankTabSectionType.BOTTOM}>
+        footer stub
+      </BlankTabSection>
+      {/* buffer */}
+      <div className="h-[4rem]"></div>
     </ Background>
   )
 }

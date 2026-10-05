@@ -2,7 +2,12 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+@source "./debug/page.tsx";
+
 /* @custom-variant dark (&:is(.dark *)); */
+
+/* empty class for filtering in InteractionObserver, indicates the element has an entry animation */
+.has-entry-animation {}
 
 @theme inline {
   /* --color-background: var(--background);
