@@ -1,7 +1,9 @@
 :root {
     --debug: 245, 134, 237;
 
-    --margin-base: 40px;
+    --max-section-width: 200rem;
+    --margin-base-side: 100px;
+    --margin-base-top: 80px;
 
     --opacity-landing: 0;
 
@@ -9,9 +11,9 @@
     --border-thickness-extra: 10px;
 
     --color-primary: rgb(0, 85, 221);
-    --color-secondary: rgb(119, 182, 234);
-    --color-tertiary: rgb(147, 201, 213);
-    --color-quaternary: rgb(179, 222, 193);
+    --color-secondary: rgb(100, 173, 233);
+    --color-tertiary: rgb(103, 196, 202);
+    --color-quaternary: rgb(133, 225, 164);
     --color-accent: rgb(249, 210, 16);
     --color-border-primary: rgb(0, 23, 61);
     --color-border-secondary: rgb(13, 39, 60);
@@ -29,18 +31,20 @@
 
     /* animation vars */
     --anim-preset: 1s ease-out;
+
+    font-family: var(--font-geist-mono);
 }
 
 h1 {
-    margin-top: 30px;
-    margin-left: var(--margin-base);
+    margin-top: var(--margin-base-top);
+    margin-left: var(--margin-base-side);
     font-size: 2rem;
     font-weight: bold;
     text-decoration: underline;
 }
 
 .subtitle {
-    margin-left: var(--margin-base);
+    margin-left: var(--margin-base-side);
     font-size: 1.3rem;
     font-weight: bold;
     margin-bottom: 30px;
@@ -58,20 +62,30 @@ a {
 }
 
 #header {
+
     position: fixed;
     width: 100%;
-    padding: 1rem;
+    padding: 1.2rem 1.2rem 0 1.2rem;
     background: rgb(var(--debug));
     z-index: 2;
-    background-color: var(--color-secondary);
-    border-color: var(--color-border-secondary);
-    animation: none;
-    opacity: 1;
+    font-size: 1.2rem;
+    background-color: var(--color-tertiary);
+    border-color: var(--color-border-tertiary);
+    animation: ease-out 1s;
+    animation-name: headerSlideIn;
+    animation-fill-mode: forwards;
+    opacity: 0;
+
+    .section-content {
+        padding-bottom: 1rem;
+        display: flex;
+    }
 }
 
 #landing {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     min-height: max(100dvh, 30rem);
     /* background-color: rgba(var(--color-primary), var(--opacity-landing)); */
     /* background-color: rgba(0, 0, 0, var(--opacity-landing)); */
@@ -79,54 +93,75 @@ a {
 }
 
 .hero-card {
-    margin-top: 20%;
     text-align: right;
     /* background-color: var(--color-secondary); */
-    padding-right: 10%;
+    /* padding-right: 10%; */
 }
 
 #hero-header {
     font-size: 5rem;
+    text-decoration: underline;
+    /* font-weight: bold; */
 }
 
 #hero-subheader {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
 }
 
-#hero-mini-pitch {}
+.hero-text {
+    font-size: 1.2rem;
+    color: var(--color-quaternary);
 
-#hero-to-about {}
+    a {
+        color: var(--color-accent);
+    }
+}
 
 #about {
-    color: var(--color-text-dark);
-    background-color: var(--color-secondary);
-    border-color: var(--color-border-secondary);
+    color: var(--color-text-super-dark);
+    background-color: var(--color-accent);
+    border-color: var(--color-border-accent);
+
+    p {
+        margin: 10px 0 10px var(--margin-base-side);
+    }
+
+    a {
+        color: var(--color-primary);
+        text-decoration-color: var(--color-primary);
+    }
 }
 
 #about-content {
-    padding: 10% 12%;
-    align-items: center;
-    justify-content: center;
     display: flex;
     flex-direction: row;
 }
 
+
+
 #photo-me {
     background-color: rgb(var(--debug));
-    margin: 0 12rem 0 0;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: var(--margin-base-side);
     min-width: 225px;
     min-height: 400px;
 }
 
-#about-text {
-    display: flex;
-    min-height: 100%;
-    flex-direction: column;
+#skills {
+    background-color: var(--color-secondary);
+    border-color: var(--color-border-secondary);
 }
 
-#skills {
-    background-color: var(--color-tertiary);
-    border-color: var(--color-border-tertiary);
+#skills-content {
+    margin: 0 var(--margin-base-side);
+}
+
+.skill-category {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: underline;
+
 }
 
 #projects {
@@ -136,7 +171,7 @@ a {
 
 #project-container {
     --container-grid-fill-color: color-mix(in oklab, var(--color-quaternary), white 10%);
-    --container-grid-line-color: color-mix(in oklab, var(--color-quaternary), black 15%);
+    --container-grid-line-color: color-mix(in oklab, var(--color-quaternary), black 9%);
     background:
         repeating-linear-gradient(transparent,
             transparent 38px,
@@ -147,7 +182,7 @@ a {
             var(--container-grid-fill-color) 38px,
             var(--container-grid-line-color) 38px,
             var(--container-grid-line-color) 40px);
-    margin: 60px 0;
+    margin: 60px 0 25px 0;
     border-top: double;
     border-right: none;
     border-bottom: double;
@@ -158,13 +193,14 @@ a {
 }
 
 #contact {
-    background-color: var(--color-tertiary);
-    border-color: var(--color-border-tertiary);
+    background-color: var(--color-accent);
+    border-color: var(--color-border-accent);
 }
 
 #footer {
-    background-color: var(--color-secondary);
-    border-color: var(--color-border-secondary);
+    background-color: var(--color-tertiary);
+    border-color: var(--color-border-tertiary);
+    margin-bottom: 4rem;
 }
 
 /* animations */
@@ -216,4 +252,16 @@ a {
 
 .about-text-enter {
     animation: aboutTextEnter var(--anim-preset)
+}
+
+@keyframes headerSlideIn {
+    from {
+        transform: translateY(-5rem);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

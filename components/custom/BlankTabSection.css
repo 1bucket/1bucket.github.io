@@ -64,7 +64,7 @@
 
 /* main section area */
 .section-content {
-    padding-bottom: var(--tab-height);
+    padding-bottom: calc(3 * var(--tab-height));
 }
 
 /* the tab thing that sticks out */

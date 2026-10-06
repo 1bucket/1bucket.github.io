@@ -1,0 +1,11 @@
+.base-chip {
+    padding: 10px 8px;
+    border: solid;
+    border-width: var(--border-thickness);
+    border-radius: 15px;
+    border-color: var(--color-border-quaternary);
+    background-color: var(--color-quaternary);
+
+    font-size: 1.1rem;
+    color: var(--color-text-dark);
+}

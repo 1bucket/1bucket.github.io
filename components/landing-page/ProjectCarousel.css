@@ -1,18 +1,18 @@
-h5 {
-    /* color: var(--color-quaternary); */
-}
-
-a {
-    color: var(--color-accent);
-    text-decoration-color: var(--color-accent);
-}
-
 .carousel-container {
     --padding: 15px;
 
     display: flex;
     justify-content: center;
     /* background-color: var(--color-accent); */
+
+    h5 {
+        /* color: var(--color-quaternary); */
+    }
+
+    a {
+        color: var(--color-accent);
+        text-decoration-color: var(--color-accent);
+    }
 }
 
 .carousel {
@@ -43,7 +43,12 @@ a {
     height: 100%;
 }
 
-.card-header-base {}
+.card-header-base {
+    border-bottom: solid;
+    border-bottom-color: inherit;
+    border-bottom-width: inherit;
+    padding-bottom: var(--padding);
+}
 
 .card-description-base {
     padding: 0 var(--padding);
@@ -70,7 +75,6 @@ a {
 
 .card-tool-list-base {
     padding: 0 var(--padding);
-    /* margin-top: auto; */
 }
 
 .card-footer-base {
