@@ -1,29 +1,60 @@
-body {
-    /* background-image: linear-gradient(red); */
-    /* debug end */
-}
-
 :root {
     --debug: 245, 134, 237;
 
+    --margin-base: 40px;
+
     --opacity-landing: 0;
 
-    /* --color-primary: 4, 20, 58; */
+    --border-thickness: 7px;
+    --border-thickness-extra: 10px;
+
     --color-primary: rgb(0, 85, 221);
     --color-secondary: rgb(119, 182, 234);
     --color-tertiary: rgb(147, 201, 213);
     --color-quaternary: rgb(179, 222, 193);
-    --color-accent: rgb(165, 18, 77);
-    --color-border: rgb(0, 23, 61);
+    --color-accent: rgb(249, 210, 16);
+    --color-border-primary: rgb(0, 23, 61);
+    --color-border-secondary: rgb(13, 39, 60);
+    --color-border-tertiary: rgb(10, 63, 75);
+    --color-border-quaternary: rgb(33, 70, 46);
+    --color-border-accent: rgb(61, 51, 2);
+
 
     --color-text-light: #e7ecdd;
     --color-text-dark: #313628;
+    --color-text-super-dark: #1a1d13;
     /* 
     background-image: url("/project-gifs/debug.gif");
     background-size: cover; */
 
     /* animation vars */
     --anim-preset: 1s ease-out;
+}
+
+h1 {
+    margin-top: 30px;
+    margin-left: var(--margin-base);
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.subtitle {
+    margin-left: var(--margin-base);
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+a {
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.1rem;
+    font-weight: bold;
 }
 
 #header {
@@ -33,6 +64,9 @@ body {
     background: rgb(var(--debug));
     z-index: 2;
     background-color: var(--color-secondary);
+    border-color: var(--color-border-secondary);
+    animation: none;
+    opacity: 1;
 }
 
 #landing {
@@ -66,7 +100,7 @@ body {
 #about {
     color: var(--color-text-dark);
     background-color: var(--color-secondary);
-    border-color: var(--color-border);
+    border-color: var(--color-border-secondary);
 }
 
 #about-content {
@@ -92,22 +126,45 @@ body {
 
 #skills {
     background-color: var(--color-tertiary);
-    border-color: var(--color-border);
+    border-color: var(--color-border-tertiary);
 }
 
 #projects {
     background-color: var(--color-quaternary);
-    border-color: var(--color-border);
+    border-color: var(--color-border-quaternary);
+}
+
+#project-container {
+    --container-grid-fill-color: color-mix(in oklab, var(--color-quaternary), white 10%);
+    --container-grid-line-color: color-mix(in oklab, var(--color-quaternary), black 15%);
+    background:
+        repeating-linear-gradient(transparent,
+            transparent 38px,
+            var(--container-grid-line-color) 38px,
+            var(--container-grid-line-color) 40px),
+        repeating-linear-gradient(0.25turn,
+            var(--container-grid-fill-color),
+            var(--container-grid-fill-color) 38px,
+            var(--container-grid-line-color) 38px,
+            var(--container-grid-line-color) 40px);
+    margin: 60px 0;
+    border-top: double;
+    border-right: none;
+    border-bottom: double;
+    border-left: none;
+    border-color: var(--color-border-quaternary);
+    border-width: calc(2 * var(--border-thickness-extra));
+
 }
 
 #contact {
     background-color: var(--color-tertiary);
-    border-color: var(--color-border);
+    border-color: var(--color-border-tertiary);
 }
 
 #footer {
     background-color: var(--color-secondary);
-    border-color: var(--color-border);
+    border-color: var(--color-border-secondary);
 }
 
 /* animations */

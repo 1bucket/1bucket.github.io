@@ -14,8 +14,8 @@ export default function LandingPage() {
       <section id="landing">
         <div className="hero-card title-enter">
           <div id="hero-header">Paul Enrade</div>
-          <div id="hero-subheader">Aspiring Game Developer Studying at Stony Brook University</div>
-          <div id="hero-mini-pitch">pitch</div>
+          <div id="hero-subheader">Aspiring Game Developer</div>
+          <div id="hero-mini-pitch">Bachelor's in CS at Stony Brook University</div>
           <div id="hero-to-about">to about me</div>
         </div>
       </section>
@@ -34,13 +34,15 @@ export default function LandingPage() {
         </div>
       </BlankTabSection>
       <BlankTabSection id="skills" sectionType={BlankTabSectionType.MIDDLE}>
-        <h2>Skills</h2>
-        My shiny collection of ever-evolving tools
+        <h1>Skills</h1>
+        <p className="subtitle">My shiny, ever-evolving collection of tools</p>
       </BlankTabSection>
       <BlankTabSection id="projects" sectionType={BlankTabSectionType.MIDDLE}>
-        <h2>Projects</h2>
-        Things i’ve made, or otherwise helped make
-        <ProjectCarousel />
+        <div id="project-container">
+          <h1>Projects</h1>
+          <p className="subtitle">Things I’ve made, or otherwise helped make</p>
+          <ProjectCarousel className="mb-15" />
+        </div>
       </BlankTabSection>
       <BlankTabSection id="contact" sectionType={BlankTabSectionType.MIDDLE}>
         to contact me

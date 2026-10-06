@@ -1,7 +1,5 @@
 .section-container {
     --border-radius: 1rem;
-    --border-thickness: 7px;
-    --border-thickness-extra: 10px;
     --top-margin-offset: -7px;
     /* tab height should be smaller than section padding to guarantee no intrusion on content */
     --tab-width: 4rem;
@@ -9,7 +7,12 @@
     --tab-top: -1.5rem;
     --tab-inset: 2rem;
 
-    --blank-bottom-offset: -6px;
+    --blank-bottom-offset: -7px;
+
+    /* animation vars */
+    --anim-entry-preset: linear 0.5s;
+
+    /* defaults */
 
     position: relative;
     isolation: isolate;
@@ -25,7 +28,7 @@
 }
 
 .section-container.top.animate-entry {
-    animation: ease-out 1s;
+    animation: var(--anim-entry-preset);
     animation-name: fadeIn;
     animation-fill-mode: forwards;
 }
@@ -38,7 +41,7 @@
 }
 
 .section-container.middle.animate-entry {
-    animation: ease-out 1s;
+    animation: var(--anim-entry-preset);
     animation-name: fadeIn, slideInFromBottom;
     animation-fill-mode: forwards;
 }
@@ -54,7 +57,7 @@
 }
 
 .section-container.bottom.animate-entry {
-    animation: ease-out 1s;
+    animation: var(--anim-entry-preset);
     animation-name: fadeIn, slideInFromBottom;
     animation-fill-mode: forwards;
 }
@@ -118,7 +121,7 @@
 
 @keyframes slideInFromRight {
     from {
-        transform: translateX(2rem);
+        transform: translateX(60px);
     }
 
     to {
@@ -128,7 +131,7 @@
 
 @keyframes slideInFromBottom {
     from {
-        transform: translateY(3rem);
+        transform: translateY(60px);
     }
 
     to {

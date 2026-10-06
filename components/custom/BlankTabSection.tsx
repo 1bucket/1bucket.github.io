@@ -33,7 +33,7 @@ export default function BlankTabSection({ sectionType, className, children, ...p
             }
         }, {
             root: null,
-            threshold: 0.05,
+            threshold: 0.1,
         });
         if (sectionContainer != null) {
             observer.observe(sectionContainer);

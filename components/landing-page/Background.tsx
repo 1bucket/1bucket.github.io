@@ -20,7 +20,7 @@ export default function Background(props: React.ComponentProps<"div">) {
             }}
         >
             <div className="bg-graphic bg-filter">
-                <video className={`${videoLoaded ? "video-fade-in" : "hidden"}`} autoPlay muted loop playsInline onPlay={loadVideo}>
+                <video className={`${videoLoaded ? "video-fade-in fill" : "hidden"}`} autoPlay muted loop playsInline onPlay={loadVideo}>
                     <source src="/debug/debug-trimmed.mp4" type="video/mp4" />
                 </video>
             </div>

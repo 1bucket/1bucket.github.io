@@ -1,9 +1,80 @@
+h5 {
+    /* color: var(--color-quaternary); */
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration-color: var(--color-accent);
+}
+
+.carousel-container {
+    --padding: 15px;
+
+    display: flex;
+    justify-content: center;
+    /* background-color: var(--color-accent); */
+}
+
 .carousel {
-    padding: 0 4rem;
+    padding: 0 60px;
+    max-width: 82%;
+    height: auto;
+}
+
+.carousel-button {
+    background: var(--color-accent);
+    border-width: 3px;
+    border-color: var(--card-border-color);
+}
+
+.carousel-item {
+    max-width: 30rem;
 }
 
 .card-base {
-    background: gray;
-    border-color: rgb(98, 98, 98);
-    border: 50px;
+    --card-border-width: 5px;
+    --card-border-color: var(--color-border-accent);
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    /* background-color: transparent; */
+    border-color: var(--card-border-color);
+    border-width: var(--card-border-width);
+    box-shadow: none;
+    height: 100%;
+}
+
+.card-header-base {}
+
+.card-description-base {
+    padding: 0 var(--padding);
+}
+
+.card-image-base {
+    margin: 0 calc(1.5 * var(--padding));
+    filter: drop-shadow(var(--card-border-color) var(--card-border-width) 0) drop-shadow(var(--card-border-color) 0 var(--card-border-width)) drop-shadow(var(--card-border-color) calc(-1 * var(--card-border-width)) 0) drop-shadow(var(--card-border-color) 0 calc(-1 * var(--card-border-width)));
+    object-fit: scale-down;
+    max-height: 30%;
+}
+
+#project-image-sb {
+    background-image: url('/project/stay-bouncy/sb-placeholder.png');
+    background-size: cover;
+    background-position: bottom;
+}
+
+.project-img {
+    border-color: inherit;
+    border-width: inherit;
+    border-radius: inherit;
+}
+
+.card-tool-list-base {
+    padding: 0 var(--padding);
+    /* margin-top: auto; */
+}
+
+.card-footer-base {
+    border-top-width: 5px;
+    border-color: var(--card-border-color);
+    margin-top: auto;
 }
