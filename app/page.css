@@ -42,6 +42,7 @@ h1 {
     font-size: 2rem;
     font-weight: bold;
     text-decoration: underline;
+    text-decoration-thickness: 0.3rem;
 }
 
 .subtitle {
@@ -155,7 +156,7 @@ a {
 }
 
 #skills-content {
-    margin: 0 var(--margin-base-side);
+    margin: 0 var(--margin-base-side) 37px var(--margin-base-side);
 }
 
 .skills-grid-first-row {
@@ -175,6 +176,7 @@ a {
     font-weight: bold;
     font-size: 1.2rem;
     text-decoration: underline;
+    text-decoration-thickness: 0.1rem;
     display: flex;
     align-items: center;
 }
@@ -216,6 +218,14 @@ a {
     background-color: var(--color-tertiary);
     border-color: var(--color-border-tertiary);
     margin-bottom: 4rem;
+
+    .section-content {
+        padding-bottom: 0;
+    }
+}
+
+#footer-content {
+    margin: 2rem var(--margin-base-side);
 }
 
 /* animations */

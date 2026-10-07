@@ -108,7 +108,7 @@ export default function LandingPage() {
                 <SupabaseChip />
                 <PostgreSQLChip />
               </div>
-              <p className="skills-grid-item skill-category col-span-1">IDEs:</p>
+              <p className="skills-grid-item skill-category col-span-1">IDEs/Code Editors:</p>
               <div className="skills-grid-item col-span-4">
                 <VSCChip />
                 <VSChip />
@@ -135,7 +135,11 @@ export default function LandingPage() {
             to contact me
           </BlankTabSection>
           <BlankTabSection id="footer" sectionType={BlankTabSectionType.BOTTOM}>
-            <a href="#landing">Back to top</a>
+            <div id="footer-content" className="flex flex-row">
+              <p className="mr-auto">Paul Enrade</p>
+              <p className="m-auto">Be kind.</p>
+              <a className="ml-auto" href="#landing">Back to top</a>
+            </div>
           </BlankTabSection>
 
         </div>
