@@ -12,29 +12,34 @@
     --border-thickness-extra: 10px;
     --border-thickness-less: 4px;
 
-    --color-primary: rgb(0, 85, 221);
-    /* --color-secondary: rgb(100, 173, 233); */
+    --color-base: rgb(0, 85, 221);
+    --color-primary: rgb(164, 25, 210);
     --color-secondary: rgb(215, 100, 233);
-    /* --color-tertiary: rgb(103, 196, 202); */
-    --color-tertiary: rgb(128, 200, 238);
-    --color-quaternary: rgb(133, 225, 164);
-    /* --color-accent: rgb(249, 210, 16); */
-    --color-accent: rgb(171, 19, 222);
-    --color-border-primary: rgb(0, 23, 61);
-    /* --color-border-secondary: rgb(13, 39, 60); */
+    --color-tertiary: rgb(133, 225, 164);
+    --color-quaternary: rgb(128, 200, 238);
+    --color-accent: rgb(249, 210, 16);
+    --color-border-base: rgb(0, 23, 61);
+    --color-border-primary: rgb(46, 2, 61);
     --color-border-secondary: rgb(60, 13, 48);
+    --color-border-tertiary: rgb(33, 70, 46);
+    --color-border-quaternary: rgb(10, 63, 75);
+    --color-border-accent: rgb(61, 51, 2);
+
+    /* --color-primary: rgb(0, 85, 221);
+    --color-secondary: rgb(100, 173, 233);
+    --color-tertiary: rgb(128, 200, 238);
+    --color-quaternary: rgb(103, 196, 202);
+    --color-accent: rgb(249, 210, 16);
+    --color-border-primary: rgb(0, 23, 61);
+    --color-border-secondary: rgb(13, 39, 60);
     --color-border-tertiary: rgb(10, 63, 75);
-    --color-border-quaternary: rgb(33, 70, 46);
-    /* --color-border-accent: rgb(61, 51, 2); */
-    --color-border-accent: rgb(46, 2, 61);
+    --color-border-accent: rgb(61, 51, 2); */
 
 
     --color-text-light: #e7ecdd;
     --color-text-dark: #313628;
     --color-text-super-dark: #1a1d13;
-    /* 
-    background-image: url("/project-gifs/debug.gif");
-    background-size: cover; */
+
 
     /* animation vars */
     --anim-preset: 1s ease-out;
@@ -80,8 +85,9 @@ figcaption {
     background: rgb(var(--debug));
     z-index: 2;
     font-size: 1.2rem;
-    background-color: var(--color-tertiary);
-    border-color: var(--color-border-tertiary);
+    background-color: var(--color-base);
+    border-color: var(--color-border-base);
+    color: var(--color-text-light);
     animation: ease-out 1s;
     animation-name: headerSlideIn;
     animation-fill-mode: forwards;
@@ -121,17 +127,16 @@ figcaption {
 
 .hero-text {
     font-size: 1.2rem;
-    color: var(--color-quaternary);
 
     a {
-        color: var(--color-secondary);
+        color: var(--color-accent);
     }
 }
 
 #about {
     color: var(--color-text-light);
-    background-color: var(--color-accent);
-    border-color: var(--color-border-accent);
+    background-color: var(--color-primary);
+    border-color: var(--color-border-primary);
 
     p {
         margin: 10px 0 10px var(--margin-base-side);
@@ -142,8 +147,8 @@ figcaption {
     }
 
     a {
-        color: var(--color-tertiary);
-        text-decoration-color: var(--color-tertiary);
+        color: var(--color-accent);
+        text-decoration-color: var(--color-accent);
     }
 }
 
@@ -169,8 +174,6 @@ figcaption {
     margin-top: 10px;
     margin-left: auto;
     margin-right: var(--margin-base-side);
-    min-width: 225px;
-    min-height: 400px;
 
     @media (max-width: 1100px) {
         margin-right: auto;
@@ -180,6 +183,7 @@ figcaption {
 #photo-me {
     object-fit: contain;
     filter: drop-shadow(var(--color-border-accent) var(--border-thickness) 0) drop-shadow(var(--color-border-accent) 0 var(--border-thickness)) drop-shadow(var(--color-border-accent) calc(-1 * var(--border-thickness)) 0) drop-shadow(var(--color-border-accent) 0 calc(-1 * var(--border-thickness)));
+    max-height: 40rem;
 
 }
 
@@ -215,13 +219,13 @@ figcaption {
 }
 
 #projects {
-    background-color: var(--color-quaternary);
-    border-color: var(--color-border-quaternary);
+    background-color: var(--color-tertiary);
+    border-color: var(--color-border-tertiary);
 }
 
 #project-container {
-    --container-grid-fill-color: color-mix(in oklab, var(--color-quaternary), white 10%);
-    --container-grid-line-color: color-mix(in oklab, var(--color-quaternary), black 9%);
+    --container-grid-fill-color: color-mix(in oklab, var(--color-tertiary), white 10%);
+    --container-grid-line-color: color-mix(in oklab, var(--color-tertiary), black 9%);
     background:
         repeating-linear-gradient(transparent,
             transparent 38px,
@@ -244,13 +248,18 @@ figcaption {
 
 #contact {
     color: var(--color-text-light);
-    background-color: var(--color-accent);
-    border-color: var(--color-border-accent);
+    background-color: var(--color-primary);
+    border-color: var(--color-border-primary);
+}
+
+#contact-content {
+    margin: 0 var(--margin-base-side) 30px var(--margin-base-side);
 }
 
 #footer {
-    background-color: var(--color-tertiary);
-    border-color: var(--color-border-tertiary);
+    background-color: var(--color-base);
+    border-color: var(--color-border-base);
+    color: var(--color-text-light);
     margin-bottom: 4rem;
 
     .section-content {

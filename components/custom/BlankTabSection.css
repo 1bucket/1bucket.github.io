@@ -25,6 +25,7 @@
     border-width: var(--border-thickness-extra) var(--border-thickness) var(--border-thickness) var(--border-thickness);
     border-radius: var(--border-radius) var(--border-radius) 0 0;
     opacity: 0;
+    will-change: opacity, transform;
 }
 
 .section-container.top.animate-entry {
@@ -38,6 +39,7 @@
     border-color: inherit;
     margin-top: var(--top-margin-offset);
     opacity: 0;
+    will-change: opacity, transform;
 }
 
 .section-container.middle.animate-entry {
@@ -53,6 +55,7 @@
     margin-top: var(--top-margin-offset);
     border-radius: 0 0 var(--border-radius) var(--border-radius);
     opacity: 0;
+    will-change: opacity, transform;
     padding-bottom: 0;
 }
 

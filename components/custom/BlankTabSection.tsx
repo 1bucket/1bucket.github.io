@@ -25,6 +25,7 @@ export default function BlankTabSection({ sectionType, className, children, ...p
     let [visible, setVisible] = useState(false);
     let sectionContainerRef = useRef<HTMLDivElement>(null);
     useEffect(() => {
+        // console.log("setting up observer for " + props.id);
         const sectionContainer = sectionContainerRef.current;
         const observer = new IntersectionObserver(([entry]) => {
             if (entry.isIntersecting && sectionContainer != null) {

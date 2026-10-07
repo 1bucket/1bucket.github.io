@@ -31,6 +31,7 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel"
+import ExternalLinkIcon from '@/components/custom/ExternalLinkIcon';
 
 import './ProjectCarousel.css'
 
@@ -60,7 +61,7 @@ export default function ProjectCarousel({ className, ...props }: React.Component
                                 <GDScriptChip className="chip-small" />
                             </CardDescription>
                             <CardFooter className={`${carouselCardFooterBaseClass}`}>
-                                <a href="https://github.com/1bucket/stay-bouncy" target="_blank">Github</a>
+                                <a href="https://github.com/1bucket/stay-bouncy" target="_blank">Github<ExternalLinkIcon /></a>
                             </CardFooter>
                         </Card>
                     </CarouselItem>

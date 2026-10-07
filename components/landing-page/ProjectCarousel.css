@@ -34,7 +34,7 @@
 .card-base {
     --card-border-width: 5px;
     --card-border-color: var(--color-border-accent);
-    background-color: var(--color-primary);
+    background-color: var(--color-base);
     color: var(--color-text-light);
     /* background-color: transparent; */
     border-color: var(--card-border-color);
@@ -85,8 +85,8 @@
     color: var(--text-color-dark);
 
     a {
-        color: var(--color-primary);
-        text-decoration-color: var(--color-primary);
+        color: var(--color-base);
+        text-decoration-color: var(--color-base);
     }
 }
 
