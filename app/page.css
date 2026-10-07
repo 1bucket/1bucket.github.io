@@ -1,7 +1,7 @@
 :root {
     --debug: 245, 134, 237;
 
-    --max-section-width: 200rem;
+    --max-section-width: 77rem;
     --margin-base-side: 100px;
     --margin-base-top: 80px;
 
@@ -9,6 +9,7 @@
 
     --border-thickness: 7px;
     --border-thickness-extra: 10px;
+    --border-thickness-less: 4px;
 
     --color-primary: rgb(0, 85, 221);
     --color-secondary: rgb(100, 173, 233);
@@ -95,7 +96,7 @@ a {
 .hero-card {
     text-align: right;
     /* background-color: var(--color-secondary); */
-    /* padding-right: 10%; */
+    /* padding-right: 8rem; */
 }
 
 #hero-header {
@@ -157,11 +158,25 @@ a {
     margin: 0 var(--margin-base-side);
 }
 
+.skills-grid-first-row {
+    border-top: solid var(--color-border-secondary);
+}
+
+.skills-grid-item {
+    border-bottom: solid var(--color-border-secondary);
+    padding: 8px 0;
+}
+
+.skills-grid-item * {
+    margin: 4px 4px;
+}
+
 .skill-category {
     font-weight: bold;
     font-size: 1.2rem;
     text-decoration: underline;
-
+    display: flex;
+    align-items: center;
 }
 
 #projects {

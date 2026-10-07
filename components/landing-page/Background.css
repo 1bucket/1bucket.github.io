@@ -2,6 +2,10 @@
     --bg-placeholder: 0, 85, 221;
 }
 
+video {
+    transform: scale(1.5) translate(15%, -15%);
+}
+
 .bg-container {
     background-color: rgb(var(--bg-placeholder));
 
@@ -18,7 +22,7 @@
 }
 
 .bg-filter {
-    filter: blur(2px) brightness(1);
+    filter: blur(1px) brightness(1);
 }
 
 .content {

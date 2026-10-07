@@ -2,6 +2,20 @@
 
 import { cn } from 'cn';
 import {
+    BaseChip, //language chips
+    JavaChip,
+    PythonChip,
+    CChip,
+    GDScriptChip,
+    JSTSChip,
+    SwiftChip,
+    GodotChip, //gamedev chips
+    UnrealChip,
+    ProcessingChip,
+    PygameChip,
+    AsepriteChip,
+} from '@/components/custom/Chips';
+import {
     Card,
     CardAction,
     CardContent,
@@ -40,7 +54,11 @@ export default function ProjectCarousel({ className, ...props }: React.Component
                             <CardDescription className={`${carouselCardDescBaseClass}`}>A small (for now) arcade style game — bounce against surfaces to gain score, but be wary of the energy gauge and stay within a stable range!</CardDescription>
                             {/* <CardContent id="project-image-sb" className={`${carouselCardImageBaseClass}`}> */}
                             <img className={`${carouselCardImageBaseClass}`} src="/project/stay-bouncy/sb-placeholder.png" />
-                            <CardDescription className={`${carouselCardToolsListBaseClass}`}>Prototyped with: Godot, GDScript</CardDescription>
+                            <CardDescription className={`${carouselCardToolsListBaseClass}`}>
+                                <div>Prototyped with: </div>
+                                <GodotChip className="chip-small mt-2 mr-2" />
+                                <GDScriptChip className="chip-small" />
+                            </CardDescription>
                             <CardFooter className={`${carouselCardFooterBaseClass}`}>
                                 <a href="https://github.com/1bucket/stay-bouncy" target="_blank">Github</a>
                             </CardFooter>

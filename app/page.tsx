@@ -2,17 +2,50 @@
 
 import Background from '@/components/landing-page/Background';
 import ProjectCarousel from '@/components/landing-page/ProjectCarousel';
-import { BaseChip } from '@/components/custom/Chips';
+import {
+  BaseChip, //language chips
+  JavaChip,
+  PythonChip,
+  CChip,
+  GDScriptChip,
+  JSTSChip,
+  SwiftChip,
+  GodotChip, //gamedev chips
+  UnrealChip,
+  ProcessingChip,
+  PygameChip,
+  AsepriteChip,
+  HTMLCSSChip, //webdev chips
+  TailwindChip,
+  ReactChip,
+  ElectronChip,
+  NodeChip,
+  ExpressChip,
+  PostmanChip,
+  VercelChip,
+  MongoChip,
+  SupabaseChip,
+  PostgreSQLChip,
+  VSCChip, //IDE chips
+  VSChip,
+  EclipseChip,
+  VimChip,
+  XCodeChip,
+  AndroidStudioChip,
+  GitChip, //ver ctrl chips
+  PerforceChip
+} from '@/components/custom/Chips';
 
 import BlankTabSection, { BlankTabSectionType } from '@/components/custom/BlankTabSection';
 
 import './page.css'
 
 export default function LandingPage() {
+
   return (
     <Background>
       <BlankTabSection id="header" sectionType={BlankTabSectionType.BOTTOM}>
-        <a className="text-[var(--color-primary)]" href="#landing">Paul Enrade</a>
+        <a className="" href="#landing">Paul Enrade</a>
         <a className="ml-[auto]" href="#about">About</a>
         <a className="ml-7" href="#skills">Skills</a>
         <a className="ml-7" href="#projects">Projects</a>
@@ -43,22 +76,51 @@ export default function LandingPage() {
           <BlankTabSection id="skills" sectionType={BlankTabSectionType.MIDDLE}>
             <h1>Skills</h1>
             <p className="subtitle">My shiny, ever-evolving collection of tools</p>
-            <div id="skills-content" className="grid grid-cols-5 gap-5">
-              <p className="skill-category col-span-1">Languages:</p>
-              <div className="col-span-4">
-                <BaseChip />
+            <div id="skills-content" className="grid grid-cols-5 gap-row-1">
+              <p className="skill-category skills-grid-item skills-grid-first-row col-span-1">Languages:</p>
+              <div className="skills-grid-item skills-grid-first-row col-span-4 overflow-wrap">
+                <JavaChip className="mr-2" />
+                <PythonChip className="mr-2" />
+                <CChip className="mr-2" />
+                <GDScriptChip className="mr-2" />
+                <JSTSChip className="mr-2" />
+                <SwiftChip className="" />
               </div>
-              <p className="skill-category col-span-1">Game Engines:</p>
-              <div className="col-span-4">
-                chips stub
+              <p className="skills-grid-item skill-category col-span-1">Game Dev Tools:</p>
+              <div className="skills-grid-item col-span-4 overflow-wrap">
+                <GodotChip className="mr-2" />
+                <UnrealChip className="mr-2" />
+                <ProcessingChip className="mr-2" />
+                <PygameChip className="mr-2" />
+                <AsepriteChip />
               </div>
-              <p className="skill-category col-span-1">Web Dev Tools:</p>
-              <div className="col-span-4">
-                chips stub
+              <p className="skills-grid-item skill-category col-span-1">Web Dev Tools:</p>
+              <div className="skills-grid-item col-span-4">
+                <HTMLCSSChip />
+                <TailwindChip />
+                <ReactChip />
+                <ElectronChip />
+                <NodeChip />
+                <ExpressChip />
+                <PostmanChip />
+                <VercelChip />
+                <MongoChip />
+                <SupabaseChip />
+                <PostgreSQLChip />
               </div>
-              <p className="skill-category col-span-1">More Tools:</p>
-              <div className="col-span-4">
-                chips stub
+              <p className="skills-grid-item skill-category col-span-1">IDEs:</p>
+              <div className="skills-grid-item col-span-4">
+                <VSCChip />
+                <VSChip />
+                <EclipseChip />
+                <VimChip />
+                <XCodeChip />
+                <AndroidStudioChip />
+              </div>
+              <p className="skills-grid-item skill-category col-span-1">Version Control:</p>
+              <div className="skills-grid-item col-span-4">
+                <GitChip />
+                <PerforceChip />
               </div>
             </div>
           </BlankTabSection>
