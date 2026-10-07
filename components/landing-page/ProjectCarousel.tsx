@@ -47,7 +47,7 @@ export default function ProjectCarousel({ className, ...props }: React.Component
             <Carousel className="carousel">
                 <CarouselContent className="-ml-[var(--padding)]">
                     <CarouselItem className={`${carouselItemClass}`}>
-                        <Card className={`${carouselCardBaseClass}`}>
+                        <Card id="project-card-stay-bouncy" className={`${carouselCardBaseClass}`}>
                             <CardHeader className={`${carouselCardHeaderBaseClass}`}>
                                 <h5>Stay Bouncy</h5>
                             </CardHeader>
@@ -66,7 +66,7 @@ export default function ProjectCarousel({ className, ...props }: React.Component
                     </CarouselItem>
                     <CarouselItem className={`${carouselItemClass}`}>
                         <Card className={`${carouselCardBaseClass}`}>
-                            <CardHeader className={`${carouselCardHeaderBaseClass}`}><h5>project 2</h5></CardHeader>
+                            <CardHeader className={`${carouselCardHeaderBaseClass}`}><h5>Weschedule</h5></CardHeader>
                             <CardDescription className={`${carouselCardDescBaseClass}`}>(blurb here)</CardDescription>
                             <CardContent className={`${carouselCardImageBaseClass}`}>(photo here)</CardContent>
                             <CardDescription className={`${carouselCardToolsListBaseClass}`}>tools used</CardDescription>
@@ -75,7 +75,7 @@ export default function ProjectCarousel({ className, ...props }: React.Component
                     </CarouselItem>
                     <CarouselItem className={`${carouselItemClass}`}>
                         <Card className={`${carouselCardBaseClass}`}>
-                            <CardHeader className={`${carouselCardHeaderBaseClass}`}><h5>project 3</h5></CardHeader>
+                            <CardHeader className={`${carouselCardHeaderBaseClass}`}><h5>Moonwalk the Plank</h5></CardHeader>
                             <CardDescription className={`${carouselCardDescBaseClass}`}></CardDescription>
                             <CardContent className={`${carouselCardImageBaseClass}`}>dummy</CardContent>
                             <CardDescription className={`${carouselCardToolsListBaseClass}`}>tools used</CardDescription>
@@ -84,7 +84,34 @@ export default function ProjectCarousel({ className, ...props }: React.Component
                     </CarouselItem>
                     <CarouselItem className={`${carouselItemClass}`}>
                         <Card className={`${carouselCardBaseClass}`}>
-                            <CardHeader className={`${carouselCardHeaderBaseClass}`}><h5>project 4</h5></CardHeader>
+                            <CardHeader className={`${carouselCardHeaderBaseClass}`}><h5>Audio Visualizer</h5></CardHeader>
+                            <CardDescription className={`${carouselCardDescBaseClass}`}></CardDescription>
+                            <CardContent className={`${carouselCardImageBaseClass}`}>dummy</CardContent>
+                            <CardDescription className={`${carouselCardToolsListBaseClass}`}>tools used</CardDescription>
+                            <CardFooter className={`${carouselCardFooterBaseClass}`}></CardFooter>
+                        </Card>
+                    </CarouselItem>
+                    <CarouselItem className={`${carouselItemClass}`}>
+                        <Card className={`${carouselCardBaseClass}`}>
+                            <CardHeader className={`${carouselCardHeaderBaseClass}`}><h5>Minesweeper Clone</h5></CardHeader>
+                            <CardDescription className={`${carouselCardDescBaseClass}`}></CardDescription>
+                            <CardContent className={`${carouselCardImageBaseClass}`}>dummy</CardContent>
+                            <CardDescription className={`${carouselCardToolsListBaseClass}`}>tools used</CardDescription>
+                            <CardFooter className={`${carouselCardFooterBaseClass}`}></CardFooter>
+                        </Card>
+                    </CarouselItem>
+                    <CarouselItem className={`${carouselItemClass}`}>
+                        <Card className={`${carouselCardBaseClass}`}>
+                            <CardHeader className={`${carouselCardHeaderBaseClass}`}><h5>Battlecode 2024</h5></CardHeader>
+                            <CardDescription className={`${carouselCardDescBaseClass}`}></CardDescription>
+                            <CardContent className={`${carouselCardImageBaseClass}`}>dummy</CardContent>
+                            <CardDescription className={`${carouselCardToolsListBaseClass}`}>tools used</CardDescription>
+                            <CardFooter className={`${carouselCardFooterBaseClass}`}></CardFooter>
+                        </Card>
+                    </CarouselItem>
+                    <CarouselItem id="project-quatience" className={`${carouselItemClass}`}>
+                        <Card className={`${carouselCardBaseClass}`}>
+                            <CardHeader className={`${carouselCardHeaderBaseClass}`}><h5>Quatience</h5></CardHeader>
                             <CardDescription className={`${carouselCardDescBaseClass}`}></CardDescription>
                             <CardContent className={`${carouselCardImageBaseClass}`}>dummy</CardContent>
                             <CardDescription className={`${carouselCardToolsListBaseClass}`}>tools used</CardDescription>

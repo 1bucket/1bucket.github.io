@@ -1,7 +1,8 @@
 :root {
     --debug: 245, 134, 237;
 
-    --max-section-width: 77rem;
+    --max-section-width: min(77rem, 100dvw);
+    --media-max-width: 1100px;
     --margin-base-side: 100px;
     --margin-base-top: 80px;
 
@@ -12,15 +13,20 @@
     --border-thickness-less: 4px;
 
     --color-primary: rgb(0, 85, 221);
-    --color-secondary: rgb(100, 173, 233);
-    --color-tertiary: rgb(103, 196, 202);
+    /* --color-secondary: rgb(100, 173, 233); */
+    --color-secondary: rgb(215, 100, 233);
+    /* --color-tertiary: rgb(103, 196, 202); */
+    --color-tertiary: rgb(128, 200, 238);
     --color-quaternary: rgb(133, 225, 164);
-    --color-accent: rgb(249, 210, 16);
+    /* --color-accent: rgb(249, 210, 16); */
+    --color-accent: rgb(171, 19, 222);
     --color-border-primary: rgb(0, 23, 61);
-    --color-border-secondary: rgb(13, 39, 60);
+    /* --color-border-secondary: rgb(13, 39, 60); */
+    --color-border-secondary: rgb(60, 13, 48);
     --color-border-tertiary: rgb(10, 63, 75);
     --color-border-quaternary: rgb(33, 70, 46);
-    --color-border-accent: rgb(61, 51, 2);
+    /* --color-border-accent: rgb(61, 51, 2); */
+    --color-border-accent: rgb(46, 2, 61);
 
 
     --color-text-light: #e7ecdd;
@@ -63,8 +69,11 @@ a {
     font-weight: bold;
 }
 
-#header {
+figcaption {
+    font-style: italic;
+}
 
+#header {
     position: fixed;
     width: 100%;
     padding: 1.2rem 1.2rem 0 1.2rem;
@@ -115,39 +124,63 @@ a {
     color: var(--color-quaternary);
 
     a {
-        color: var(--color-accent);
+        color: var(--color-secondary);
     }
 }
 
 #about {
-    color: var(--color-text-super-dark);
+    color: var(--color-text-light);
     background-color: var(--color-accent);
     border-color: var(--color-border-accent);
 
     p {
         margin: 10px 0 10px var(--margin-base-side);
+
+        @media (max-width: 1100px) {
+            margin: 10px var(--margin-base-side);
+        }
     }
 
     a {
-        color: var(--color-primary);
-        text-decoration-color: var(--color-primary);
+        color: var(--color-tertiary);
+        text-decoration-color: var(--color-tertiary);
     }
 }
 
 #about-content {
     display: flex;
     flex-direction: row;
+
+    @media (max-width: 1100px) {
+        flex-direction: column;
+    }
 }
 
+#about-text {
+    max-width: 40rem;
 
+    @media (max-width: 1100px) {
+        max-width: 100%;
+    }
 
-#photo-me {
-    background-color: rgb(var(--debug));
+}
+
+#fig-photo-me {
     margin-top: 10px;
     margin-left: auto;
     margin-right: var(--margin-base-side);
     min-width: 225px;
     min-height: 400px;
+
+    @media (max-width: 1100px) {
+        margin-right: auto;
+    }
+}
+
+#photo-me {
+    object-fit: contain;
+    filter: drop-shadow(var(--color-border-accent) var(--border-thickness) 0) drop-shadow(var(--color-border-accent) 0 var(--border-thickness)) drop-shadow(var(--color-border-accent) calc(-1 * var(--border-thickness)) 0) drop-shadow(var(--color-border-accent) 0 calc(-1 * var(--border-thickness)));
+
 }
 
 #skills {
@@ -210,6 +243,7 @@ a {
 }
 
 #contact {
+    color: var(--color-text-light);
     background-color: var(--color-accent);
     border-color: var(--color-border-accent);
 }

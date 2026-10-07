@@ -62,15 +62,34 @@ export default function LandingPage() {
             </div>
           </section>
           <BlankTabSection id="about" sectionType={BlankTabSectionType.TOP}>
-            <h1>Who am I?</h1>
+            <h1>About me</h1>
             <div id="about-content">
-              <div className="max-w-[30rem]">
-                <p>Hello! My name’s Paul, and I’m currently an undergraduate student at Stony Brook University pursuing a bachelor’s in computer science. I’m also participating in Stony Brook’s Computer Science Honors program. My passion is game development, but that doesn’t stop me from diving into other areas in my field like UI/UX design and web development. I love creating things that challenge me to think differently, things that can help others, and things that everyone can enjoy.</p>
-                <p>Simply put, I like making cool stuff.</p>
-                <p>Here's my <a href="https://github.com/1bucket" target="_blank">GitHub</a>.</p>
-                <p>And here's my <a href="https://www.linkedin.com/in/paul-enrade-8432682b1/" target="_blank">LinkedIn</a>.</p>
+              <div id="about-text">
+                <p className="subtitle">Who am I?</p>
+                <p>
+                  Hello! My name’s Paul, and I’m currently an undergraduate student at Stony Brook University pursuing a bachelor’s in computer science. I’m also participating in Stony Brook’s Computer Science Honors program, where I get to take advanced courses in my major and complete a faculty-advised honors project in my senior year.
+                </p>
+                <p className="subtitle">What am I interested in?</p>
+                <p>
+                  I’m interested in several areas like UI/UX design and web development, but the majority of my passion lies in game development. I’ve been playing video games for as long as I can remember — games like Deltarune, Fortnite, Super Mario Galaxy, and Minecraft have all been unforgettable experiences (and still are!), and each has given me a different lens through which I can examine the world around me. In their own unique ways, they’ve helped shape a more nuanced understanding of myself and of others, which is something I hope to achieve through my own projects. I want to create things that challenge the way we think, things that can help others, and things that everyone can enjoy.
+                </p>
+                <p>
+                  Simply put, I’m in the business of making cool stuff.
+                </p>
+                <p>
+                  <a href="https://github.com/1bucket" target="_blank">GitHub</a>.
+                </p>
+                <p>
+                  Interested in talking?
+                </p>
+                <p>
+                  <a href="https://www.linkedin.com/in/paul-enrade-8432682b1/" target="_blank">LinkedIn</a>.
+                </p>
               </div>
-              <img id="photo-me" src={undefined} />
+              <figure id="fig-photo-me">
+                <img id="photo-me" src="me/me.jpeg" />
+                <figcaption className="mt-5">I often enjoy exploring parks and nature.</figcaption>
+              </figure>
             </div>
           </BlankTabSection>
           <BlankTabSection id="skills" sectionType={BlankTabSectionType.MIDDLE}>
@@ -132,7 +151,8 @@ export default function LandingPage() {
             </div>
           </BlankTabSection>
           <BlankTabSection id="contact" sectionType={BlankTabSectionType.MIDDLE}>
-            to contact me
+            <h1>Send me a message!</h1>
+            <p className="subtitle">I don't bite.</p>
           </BlankTabSection>
           <BlankTabSection id="footer" sectionType={BlankTabSectionType.BOTTOM}>
             <div id="footer-content" className="flex flex-row">

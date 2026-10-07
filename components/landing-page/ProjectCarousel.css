@@ -61,12 +61,6 @@
     max-height: 30%;
 }
 
-#project-image-sb {
-    background-image: url('/project/stay-bouncy/sb-placeholder.png');
-    background-size: cover;
-    background-position: bottom;
-}
-
 .project-img {
     border-color: inherit;
     border-width: inherit;
@@ -81,4 +75,23 @@
     border-top-width: 5px;
     border-color: var(--card-border-color);
     margin-top: auto;
+}
+
+/* project specific styling */
+
+#project-card-stay-bouncy {
+    --card-border-color: rgb(36, 109, 164);
+    background-color: white;
+    color: var(--text-color-dark);
+
+    a {
+        color: var(--color-primary);
+        text-decoration-color: var(--color-primary);
+    }
+}
+
+#project-image-sb {
+    background-image: url('/project/stay-bouncy/sb-placeholder.png');
+    background-size: cover;
+    background-position: bottom;
 }
