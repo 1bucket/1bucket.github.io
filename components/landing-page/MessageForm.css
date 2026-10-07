@@ -1,0 +1,28 @@
+.form-row {
+    margin-bottom: 10px;
+}
+
+.form-label {
+    text-decoration: underline;
+}
+
+.form-field {
+    background-color: var(--color-secondary);
+    border-color: var(--color-border-secondary);
+    border-width: 3px;
+    color: var(--color-text-super-dark);
+}
+
+.form-button-submit {
+    background-color: var(--color-accent);
+    border-color: var(--color-border-accent);
+    border-width: 3px;
+    color: var(--color-text-super-dark);
+}
+
+.form-button {
+    background-color: var(--color-quaternary);
+    border-color: var(--color-border-quaternary);
+    border-width: 3px;
+    color: var(--color-text-super-dark);
+}
