@@ -1,2 +1,0 @@
-:root{--bg-placeholder:0, 85, 221}.bg-container{background-color:rgb(var(--bg-placeholder))}.bg-graphic{background-color:rgb(var(--bg-placeholder));z-index:-1;width:110dvw;height:110dvh;position:fixed;top:-5dvh;left:-5dvw}.bg-filter{filter:blur(2px)brightness()}.content{z-index:1;width:100dvw;position:fixed;top:0;right:0}@keyframes videoFadeIn{0%{opacity:0}to{opacity:1}}.video-fade-in{animation:1s cubic-bezier(0,.1,.5,1) videoFadeIn}
-.carousel{padding:0 4rem}.card-base{background:gray;border:50px}
