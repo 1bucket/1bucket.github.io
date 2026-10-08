@@ -21,8 +21,8 @@
 }
 
 .form-button {
-    background-color: var(--color-quaternary);
-    border-color: var(--color-border-quaternary);
+    background-color: var(--color-tertiary);
+    border-color: var(--color-border-tertiary);
     border-width: 3px;
     color: var(--color-text-super-dark);
 }

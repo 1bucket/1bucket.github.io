@@ -112,7 +112,7 @@ figcaption {
 .hero-card {
     text-align: right;
     /* background-color: var(--color-secondary); */
-    /* padding-right: 8rem; */
+    padding-right: 1rem;
 }
 
 #hero-header {
