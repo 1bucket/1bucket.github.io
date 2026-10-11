@@ -52,7 +52,9 @@ export default function ProjectCarousel({ className, ...props }: React.Component
                             <CardHeader className={`${carouselCardHeaderBaseClass}`}>
                                 <h5>Stay Bouncy</h5>
                             </CardHeader>
-                            <CardDescription className={`${carouselCardDescBaseClass}`}>A small (for now) arcade style game — bounce against surfaces to gain score, but be wary of the energy gauge and stay within a stable range!</CardDescription>
+                            <CardDescription className={`${carouselCardDescBaseClass}`}
+                            >A small (for now) arcade style game — bounce against surfaces to gain score, but be wary of the energy gauge and stay within a stable range!
+                            </CardDescription>
                             {/* <CardContent id="project-image-sb" className={`${carouselCardImageBaseClass}`}> */}
                             <img className={`${carouselCardImageBaseClass}`} src="/project/stay-bouncy/sb-placeholder.png" />
                             <CardDescription className={`${carouselCardToolsListBaseClass}`}>
@@ -68,7 +70,9 @@ export default function ProjectCarousel({ className, ...props }: React.Component
                     <CarouselItem className={`${carouselItemClass}`}>
                         <Card className={`${carouselCardBaseClass}`}>
                             <CardHeader className={`${carouselCardHeaderBaseClass}`}><h5>Weschedule</h5></CardHeader>
-                            <CardDescription className={`${carouselCardDescBaseClass}`}>(blurb here)</CardDescription>
+                            <CardDescription className={`${carouselCardDescBaseClass}`}>
+                                Event planning web app which was developed over two semesters by a team of six (including myself) under the mentorship of another computer science student.
+                            </CardDescription>
                             <CardContent className={`${carouselCardImageBaseClass}`}>(photo here)</CardContent>
                             <CardDescription className={`${carouselCardToolsListBaseClass}`}>tools used</CardDescription>
                             <CardFooter className={`${carouselCardFooterBaseClass}`}>(links here)</CardFooter>
