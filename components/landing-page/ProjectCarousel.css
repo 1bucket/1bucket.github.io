@@ -25,6 +25,22 @@
     background: var(--color-accent);
     border-width: 3px;
     border-color: var(--card-border-color);
+    width: 3rem;
+    height: 3rem;
+    font-size: 3rem;
+
+    .lucide {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+.-left-12 {
+    left: calc(var(--spacing) * -2);
+}
+
+.-right-12 {
+    right: calc(var(--spacing) * -2);
 }
 
 .carousel-item {

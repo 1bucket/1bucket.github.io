@@ -48,8 +48,8 @@ export default function LandingPage() {
   const lastScrollY = useRef(-1);
   const [isScrollingDown, setScrollingDown] = useState(false);
   const handleScroll: UIEventHandler<HTMLDivElement> = (event) => {
-    console.log(`scrolling to ${event.currentTarget.scrollTop} from ${lastScrollY.current}`);
-    console.log(`isScrollingDown=${isScrollingDown}`);
+    // console.log(`scrolling to ${event.currentTarget.scrollTop} from ${lastScrollY.current}`);
+    // console.log(`isScrollingDown=${isScrollingDown}`);
     let willChange = false;
     if (event.currentTarget.scrollTop > lastScrollY.current != isScrollingDown) {
       willChange = true;
