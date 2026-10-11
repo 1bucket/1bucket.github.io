@@ -1,5 +1,7 @@
 'use client';
 
+import { useState, useEffect, useRef, UIEventHandler } from 'react';
+
 import Background from '@/components/landing-page/Background';
 import ProjectCarousel from '@/components/landing-page/ProjectCarousel';
 import {
@@ -20,6 +22,7 @@ import {
   ReactChip,
   ElectronChip,
   NodeChip,
+  NextChip,
   ExpressChip,
   PostmanChip,
   VercelChip,
@@ -42,10 +45,24 @@ import ExternalLinkIcon from '@/components/custom/ExternalLinkIcon';
 import './page.css'
 
 export default function LandingPage() {
+  const lastScrollY = useRef(0);
+  const [isScrollingDown, setScrollingDown] = useState(false);
+  const handleScroll: UIEventHandler<HTMLDivElement> = (event) => {
+    console.log(`scrolling to ${event.currentTarget.scrollTop} from ${lastScrollY.current}`);
+    let willChange = false;
+    if ((event.currentTarget.scrollTop > lastScrollY.current) != isScrollingDown) {
+      willChange = true;
+    }
+    lastScrollY.current = event.currentTarget.scrollTop;
+    if (willChange) {
+      willChange = false;
+      setScrollingDown(!isScrollingDown);
+    }
+  }
 
   return (
-    <Background>
-      <BlankTabSection id="header" sectionType={BlankTabSectionType.BOTTOM}>
+    <Background onScroll={handleScroll}>
+      <BlankTabSection id="header" className={`${isScrollingDown ? 'header-leave' : 'header-enter'}`} sectionType={BlankTabSectionType.BOTTOM}>
         <a className="" href="#landing">Paul Enrade</a>
         <a className="ml-[auto]" href="#about">About</a>
         <a className="ml-7" href="#skills">Skills</a>
@@ -123,6 +140,7 @@ export default function LandingPage() {
                 <ReactChip />
                 <ElectronChip />
                 <NodeChip />
+                <NextChip />
                 <ExpressChip />
                 <PostmanChip />
                 <VercelChip />

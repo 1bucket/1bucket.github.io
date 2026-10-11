@@ -56,6 +56,18 @@
     }
 }
 
+.chip-js {
+    border-color: black;
+    background-color: rgb(31, 31, 31);
+    color: rgb(239, 216, 29);
+}
+
+.chip-ts {
+    border-color: black;
+    background-color: rgb(31, 31, 31);
+    color: rgb(47, 116, 192);
+}
+
 .chip-swift {
     background-color: rgb(246, 99, 35);
     color: white;
@@ -132,6 +144,12 @@
     border-color: rgb(44, 52, 55);
     background-color: rgb(13, 18, 28);
     color: rgb(132, 186, 100);
+}
+
+.chip-next {
+    border-color: black;
+    background-color: black;
+    color: white
 }
 
 .chip-express {

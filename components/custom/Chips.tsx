@@ -48,6 +48,18 @@ export function JSTSChip({ className, ...props }: BadgeProps) {
     )
 }
 
+export function JSChip({ className, ...props }: BadgeProps) {
+    return (
+        <BaseChip className={cn("chip-js", className)} {...props}>JavaScript</BaseChip>
+    )
+}
+
+export function TSChip({ className, ...props }: BadgeProps) {
+    return (
+        <BaseChip className={cn("chip-ts", className)} {...props}>TypeScript</BaseChip>
+    )
+}
+
 export function SwiftChip({ className, ...props }: BadgeProps) {
     return (
         <BaseChip className={cn("chip-swift", className)} {...props}>Swift</BaseChip>
@@ -115,6 +127,12 @@ export function ElectronChip({ className, ...props }: BadgeProps) {
 export function NodeChip({ className, ...props }: BadgeProps) {
     return (
         <BaseChip className={cn("chip-node", className)} {...props}>Node.js</BaseChip>
+    )
+}
+
+export function NextChip({ className, ...props }: BadgeProps) {
+    return (
+        <BaseChip className={cn("chip-next", className)} {...props}>Next.js</BaseChip>
     )
 }
 

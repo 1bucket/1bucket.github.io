@@ -33,7 +33,7 @@
 
 .card-base {
     --card-border-width: 5px;
-    --card-border-color: var(--color-border-accent);
+    --card-border-color: rgb(0, 5, 131);
     background-color: var(--color-base);
     color: var(--color-text-light);
     /* background-color: transparent; */
@@ -44,21 +44,41 @@
 }
 
 .card-header-base {
-    border-bottom: solid;
-    border-bottom-color: inherit;
-    border-bottom-width: inherit;
-    padding-bottom: var(--padding);
+    /* padding-bottom: var(--padding); */
 }
 
 .card-description-base {
-    padding: 0 var(--padding);
+    border-bottom: solid;
+    border-bottom-color: inherit;
+    border-bottom-width: inherit;
+    border-top: solid;
+    border-top-color: inherit;
+    border-top-width: inherit;
+    height: 100%;
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card-image-base {
-    margin: 0 calc(1.5 * var(--padding));
-    filter: drop-shadow(var(--card-border-color) var(--card-border-width) 0) drop-shadow(var(--card-border-color) 0 var(--card-border-width)) drop-shadow(var(--card-border-color) calc(-1 * var(--card-border-width)) 0) drop-shadow(var(--card-border-color) 0 calc(-1 * var(--card-border-width)));
+    /* margin: 0 calc(1.5 * var(--padding)); */
     object-fit: scale-down;
-    max-height: 30%;
+    max-height: 35%;
+    /* background-size: cover; */
+    /* background-position: bottom; */
+    /* margin-top: auto;
+    margin-bottom: auto; */
+    /* margin-top: 1rem;
+    margin-bottom: 1rem; */
+}
+
+.card-image-border {
+    filter: drop-shadow(var(--card-border-color) var(--card-border-width) 0) drop-shadow(var(--card-border-color) 0 var(--card-border-width)) drop-shadow(var(--card-border-color) calc(-1 * var(--card-border-width)) 0) drop-shadow(var(--card-border-color) 0 calc(-1 * var(--card-border-width)));
+}
+
+.card-image-border-sideless {
+    filter: drop-shadow(var(--card-border-color) 0 var(--card-border-width)) drop-shadow(var(--card-border-color) 0 calc(-1 * var(--card-border-width)));
 }
 
 .project-img {
@@ -68,13 +88,17 @@
 }
 
 .card-tool-list-base {
-    padding: 0 var(--padding);
+    /* padding: 0 var(--padding); */
+    width: 100%;
+    /* margin-top: auto; */
 }
 
 .card-footer-base {
-    border-top-width: 5px;
-    border-color: var(--card-border-color);
-    margin-top: auto;
+    border: none;
+    padding-top: 0;
+    /* border-top-width: 5px;
+    border-color: var(--card-border-color); */
+    /* margin-top: auto; */
 }
 
 /* project specific styling */
@@ -91,7 +115,107 @@
 }
 
 #project-image-sb {
-    background-image: url('/project/stay-bouncy/sb-placeholder.png');
-    background-size: cover;
-    background-position: bottom;
+    /* background-image: url('/project/stay-bouncy/sb-placeholder.png'); */
+    /* background-size: cover;
+    background-position: bottom; */
 }
+
+#project-card-weschedule {
+    --card-border-color: black;
+    background-color: rgb(0, 154, 255);
+
+    .project-card-weschedule-content {
+        background-color: rgb(222, 240, 253);
+    }
+
+    ;
+    color: var(--text-color-dark);
+
+    a {
+        color: var(--text-color-super-dark);
+        text-decoration-color: var(--text-color-super-dark);
+    }
+}
+
+#project-card-moonwalk-the-plank {
+    --card-border-color: rgb(57, 37, 26);
+    color: var(--color-text-dark);
+    background-color: rgb(251, 234, 198);
+
+    h5 {
+        color: rgb(174, 94, 8);
+    }
+
+    .project-card-moonwalk-the-plank-content {
+        background-color: rgb(255, 255, 245);
+    }
+
+    a {
+        color: rgb(121, 83, 53);
+        text-decoration-color: rgb(121, 83, 53);
+    }
+}
+
+#project-card-audio-visualizer {
+    --card-border-color: rgb(64, 0, 255);
+    color: var(--color-text-light);
+    background-color: black;
+
+    h5 {
+        color: rgb(141, 65, 255);
+    }
+
+    .project-card-moonwalk-the-plank-content {
+        background-color: rgb(255, 255, 245);
+    }
+
+    a {
+        color: rgb(31, 200, 252);
+        text-decoration-color: rgb(31, 200, 252);
+    }
+}
+
+#project-card-minesweeper-clone {
+    --card-border-color: rgb(50, 50, 50);
+    color: var(--color-text-dark);
+    background-color: rgb(190, 190, 190);
+
+    h5 {
+        color: rgb(13, 48, 246);
+    }
+
+    .project-card-moonwalk-the-plank-content {
+        background-color: rgb(255, 255, 245);
+    }
+
+    a {
+        color: rgb(172, 50, 50);
+        text-decoration-color: rgb(172, 50, 50);
+    }
+}
+
+#project-card-battlecode-2024 {
+    --card-border-color: rgb(50, 50, 50);
+    color: var(--color-text-dark);
+    background-color: rgb(127, 107, 81);
+
+    h5 {
+        color: var(--color-text-light);
+    }
+
+    .project-card-battlecode-2024-content {
+        background-color: rgb(191, 186, 168);
+    }
+
+    a {
+        color: rgb(96, 86, 198);
+        text-decoration-color: rgb(96, 86, 198);
+    }
+
+    #battlecode-github-link {
+        color: var(--color-text-light);
+        text-decoration-color: var(--color-text-light);
+    }
+}
+
+#project-card-quatience {}

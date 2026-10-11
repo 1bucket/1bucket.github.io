@@ -88,10 +88,6 @@ figcaption {
     background-color: var(--color-base);
     border-color: var(--color-border-base);
     color: var(--color-text-light);
-    animation: ease-out 1s;
-    animation-name: headerSlideIn;
-    animation-fill-mode: forwards;
-    opacity: 0;
 
     .section-content {
         padding-bottom: 1rem;
@@ -332,4 +328,28 @@ figcaption {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+@keyframes headerSlideOut {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-5rem);
+        opacity: 0;
+    }
+}
+
+#header.header-enter {
+    animation: ease-out 0.25s;
+    animation-name: headerSlideIn;
+    animation-fill-mode: forwards;
+}
+
+#header.header-leave {
+    animation: ease-out 0.25s;
+    animation-name: headerSlideOut;
+    animation-fill-mode: forwards;
 }
