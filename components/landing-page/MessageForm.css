@@ -3,7 +3,8 @@
 }
 
 .form-label {
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    font-weight: bold;
 }
 
 .form-field {

@@ -10,7 +10,7 @@ export default function ExternalLinkIcon() {
                 textDecoration: "inherit",
                 marginLeft: "-0.3rem",
                 marginRight: "-0.5rem",
-                marginBottom: "0.12rem"
+                // marginBottom: "0.12rem"
             }}
         />
     )

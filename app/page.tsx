@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, UIEventHandler } from 'react';
+import { Button } from '@/components/ui/button';
 
 import Background from '@/components/landing-page/Background';
 import ProjectCarousel from '@/components/landing-page/ProjectCarousel';
@@ -68,11 +69,11 @@ export default function LandingPage() {
   return (
     <Background onScroll={handleScroll}>
       <BlankTabSection id="header" className={`${isScrollingDown ? 'header-leave' : 'header-enter'}`} sectionType={BlankTabSectionType.BOTTOM}>
-        <a className="" href="#landing">Paul Enrade</a>
-        <a className="ml-[auto]" href="#about">About</a>
-        <a className="ml-7" href="#skills">Skills</a>
-        <a className="ml-7" href="#projects">Projects</a>
-        <a className="ml-7" href="#contact">Contact</a>
+        <a className="no-underline" href="#landing">Paul Enrade</a>
+        <a className="no-underline ml-[auto]" href="#about">About</a>
+        <a className="no-underline ml-7" href="#skills">Skills</a>
+        <a className="no-underline ml-7" href="#projects">Projects</a>
+        <a className="no-underline ml-7" href="#contact">Contact</a>
       </BlankTabSection>
       <div className="w-[100%] flex grow-1 justify-center align-center">
         <div className="max-w-[var(--max-section-width)]">
@@ -98,17 +99,13 @@ export default function LandingPage() {
                 <p>
                   Simply put, I’m in the business of making <span className="font-bold text-[var(--color-tertiary)]">cool stuff</span>.
                 </p>
-                <p className="subtitle underline">
-                  Want to see what I've worked on?
-                </p>
+                <p className="subtitle underline">Want to see what I've worked on?</p>
                 <p>
-                  <a href="https://github.com/1bucket" target="_blank">GitHub<ExternalLinkIcon /></a>
+                  Check out my <a href="https://github.com/1bucket" target="_blank">GitHub<ExternalLinkIcon /></a>. Or, you can click <a href="#projects">here</a> to check out my projects!
                 </p>
-                <p className="subtitle underline">
-                  Interested in talking?
-                </p>
+                <p className="subtitle underline">Interested in talking?</p>
                 <p>
-                  <a href="https://www.linkedin.com/in/paul-enrade-8432682b1/" target="_blank">LinkedIn<ExternalLinkIcon /></a>
+                  You can write me a message on <a href="https://www.linkedin.com/in/paul-enrade-8432682b1/" target="_blank">LinkedIn<ExternalLinkIcon /></a>, or you can write a message <a href="#contact">here</a> as well!
                 </p>
               </div>
               <figure id="fig-photo-me">
@@ -180,17 +177,25 @@ export default function LandingPage() {
             <h1>Send me a message!</h1>
             <p className="subtitle">(I don't bite)</p>
             <div id="contact-content">
-              <p className="mb-5">
+              <div className="w-full flex flex-row gap-5 mb-5 h-[3rem]">
+                <Button className="p-0 button-link" onClick={() => window.location.href = "mailto:paulenrade1@gmail.com"}>
+                  Email: <a>paulenrade1@gmail.com</a><ExternalLinkIcon />
+                </Button>
+                <Button className="p-0 button-link" onClick={() => { window.open('https://www.linkedin.com/in/paul-enrade-8432682b1/', '_blank', 'noopener,noreferrer') }}>
+                  LinkedIn: <a>linkedin.com/in/paul-enrade-8432682b1/</a><ExternalLinkIcon />
+                </Button>
+              </div>
+              <MessageForm />
+              <p className="mt-5">
                 Note: "Send Email" will open up your default email app and fill it with what's in the fields below, so you can write your message here or in your actual email app. Whatever you choose!
               </p>
-              <MessageForm />
             </div>
           </BlankTabSection>
           <BlankTabSection id="footer" sectionType={BlankTabSectionType.BOTTOM}>
             <div id="footer-content" className="flex flex-row">
               <p className="mr-auto">Paul Enrade, 2026</p>
               <p className="m-auto">Be <span className="font-bold text-[var(--color-tertiary)]">kind</span> 🤍</p>
-              <a className="ml-auto" href="#landing">Back to top</a>
+              <a className="no-underline ml-auto" href="#landing">Back to top</a>
             </div>
           </BlankTabSection>
 

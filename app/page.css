@@ -47,6 +47,19 @@
     font-family: var(--font-geist-mono);
 }
 
+button:hover {
+    filter: brightness(1.1);
+    cursor: pointer;
+}
+
+button:active {
+    filter: brightness(0.8);
+}
+
+a:hover {
+    filter: brightness(1.1);
+}
+
 h1 {
     margin-top: var(--margin-base-top);
     margin-left: var(--margin-base-side);
@@ -72,6 +85,10 @@ a {
     text-decoration-line: underline;
     text-decoration-thickness: 0.1rem;
     font-weight: bold;
+}
+
+a.no-underline {
+    text-decoration-line: none;
 }
 
 figcaption {
@@ -158,7 +175,7 @@ figcaption {
 }
 
 #about-text {
-    max-width: 40rem;
+    max-width: 45rem;
 
     @media (max-width: 1100px) {
         max-width: 100%;
@@ -170,6 +187,7 @@ figcaption {
     margin-top: 10px;
     margin-left: auto;
     margin-right: var(--margin-base-side);
+    max-width: 300px;
 
     @media (max-width: 1100px) {
         margin-right: auto;
@@ -246,10 +264,26 @@ figcaption {
     color: var(--color-text-light);
     background-color: var(--color-primary);
     border-color: var(--color-border-primary);
+
+    a {
+        /* color: var(--color-tertiary);
+        text-decoration-color: var(--color-tertiary); */
+    }
 }
 
 #contact-content {
-    margin: 0 var(--margin-base-side) 30px var(--margin-base-side);
+    margin: 0 var(--margin-base-side) 20px calc(var(--margin-base-side));
+}
+
+.button-link {
+    background-color: var(--color-accent);
+    font-size: 1.05rem;
+    height: 100%;
+    padding: 1rem;
+    border: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    color: var(--color-text-super-dark);
 }
 
 #footer {

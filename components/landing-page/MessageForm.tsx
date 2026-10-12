@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Controller, useForm } from "react-hook-form";
 import * as z from 'zod';
@@ -19,6 +20,43 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>;
 
 export default function MessageForm() {
+    const placeholderNames = [
+        ['Super', 'Mario'],
+        ['Steve', 'Rogers'],
+        ['Susie', 'Deltarune'],
+        ['Steve', 'Minecraft'],
+        ['Jessica', 'Jones'],
+        ['Miles', 'Dale'],
+        ['Rumi', 'Ryu'],
+        ['Mira', 'Kang'],
+        ['Zoey', 'Choi'],
+        ['Sarah', 'Lee'],
+        ['Eun-jae', 'Kim'],
+        ['Audrey', 'Chu'],
+        ['Arden', 'Cho'],
+        ['May', 'Hong'],
+        ['Ji-young', 'Yoo'],
+        ['Optimus', 'Prime'],
+        ['Obi-Wan', 'Kenobi'],
+        ['Anakin', 'Skywalker'],
+        ['Ahsoka', 'Tano'],
+        ['Sabine', 'Wren'],
+        ['Ezra', 'Bridger'],
+        ['Kanan', 'Jarrus'],
+        ['Caleb', 'Dume'],
+        ['Zeb', 'Orrelios'],
+        ['Hera', 'Syndulla'],
+        ['Luke', 'Skywalker'],
+        ['Leia', 'Organa'],
+        ['Han', 'Solo'],
+        ['Chew', 'bacca'],
+        ['R2', 'D2'],
+        ['C3', 'PO'],
+        ['Anthony', 'Padilla'],
+    ];
+    const [placeholderName, setPlaceholderName] = useState(placeholderNames[Math.floor(Math.random() * (placeholderNames.length ?? 0))]
+        ?? ['Super', 'Mario']);
+
     const form = useForm<FormValues>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -67,7 +105,7 @@ export default function MessageForm() {
                                         {...field}
                                         id="form-msg-first-name"
                                         className="form-field"
-                                        placeholder="Super"
+                                        placeholder={`${placeholderName[0]}`}
                                         autoComplete="off"
                                     />
                                 </Field>
@@ -88,7 +126,7 @@ export default function MessageForm() {
                                         {...field}
                                         id="form-msg-last-name"
                                         className="form-field"
-                                        placeholder="Mario"
+                                        placeholder={`${placeholderName[1]}`}
                                         autoComplete="off"
                                     />
                                 </Field>
