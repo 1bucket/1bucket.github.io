@@ -118,8 +118,8 @@ export default function LandingPage() {
             <h1>Skills</h1>
             <p className="subtitle">My shiny, ever-evolving toolbox</p>
             <div id="skills-content" className="grid grid-cols-5 gap-row-1">
-              <p className="skill-category skills-grid-item skills-grid-first-row col-span-1">Languages:</p>
-              <div className="skills-grid-item skills-grid-first-row col-span-4 overflow-wrap">
+              <p className="skill-category skills-grid-item skills-grid-first-row">Languages:</p>
+              <div className="skills-grid-item skills-grid-first-row">
                 <JavaChip className="mr-2" />
                 <PythonChip className="mr-2" />
                 <CChip className="mr-2" />
@@ -127,16 +127,16 @@ export default function LandingPage() {
                 <JSTSChip className="mr-2" />
                 <SwiftChip className="" />
               </div>
-              <p className="skills-grid-item skill-category col-span-1">Game Dev Tools:</p>
-              <div className="skills-grid-item col-span-4 overflow-wrap">
+              <p className="skills-grid-item skill-category">Game Dev Tools:</p>
+              <div className="skills-grid-item">
                 <GodotChip className="mr-2" />
                 <UnrealChip className="mr-2" />
                 <ProcessingChip className="mr-2" />
                 <PygameChip className="mr-2" />
                 <AsepriteChip />
               </div>
-              <p className="skills-grid-item skill-category col-span-1">Web Dev Tools:</p>
-              <div className="skills-grid-item col-span-4">
+              <p className="skills-grid-item skill-category">Web Dev Tools:</p>
+              <div className="skills-grid-item">
                 <HTMLCSSChip />
                 <TailwindChip />
                 <ReactChip />
@@ -150,8 +150,8 @@ export default function LandingPage() {
                 <SupabaseChip />
                 <PostgreSQLChip />
               </div>
-              <p className="skills-grid-item skill-category col-span-1">IDEs/Code Editors:</p>
-              <div className="skills-grid-item col-span-4 flex items-center">
+              <p className="skills-grid-item skill-category">IDEs/Code Editors:</p>
+              <div className="skills-grid-item">
                 <VSCChip />
                 <VSChip />
                 <EclipseChip />
@@ -159,8 +159,8 @@ export default function LandingPage() {
                 <XCodeChip />
                 <AndroidStudioChip />
               </div>
-              <p className="skills-grid-item skill-category col-span-1">Version Control:</p>
-              <div className="skills-grid-item col-span-4">
+              <p className="skills-grid-item skill-category">Version Control:</p>
+              <div className="skills-grid-item">
                 <GitChip />
                 <PerforceChip />
               </div>
