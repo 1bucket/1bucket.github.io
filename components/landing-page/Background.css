@@ -46,7 +46,7 @@ video {
 }
 
 .video-fade-in {
-    animation: videoFadeIn 1s cubic-bezier(0, 0.1, 0.5, 1);
+    animation: videoFadeIn 3s cubic-bezier(0, 0.1, 0.5, 1);
 }
 
 .fill {
