@@ -191,7 +191,7 @@ figcaption {
 }
 
 #fig-photo-me {
-    margin-top: 10px;
+    margin-top: calc(10px + var(--border-thickness));
     margin-left: auto;
     margin-right: var(--margin-base-side);
     max-width: 300px;
@@ -225,6 +225,7 @@ figcaption {
     border-bottom: solid var(--color-border-secondary);
     padding: 8px 0;
     grid-column: span 4 / span 4;
+    align-content: center;
 
     @media (max-width: 800px) {
         overflow-x: scroll;

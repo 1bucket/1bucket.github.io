@@ -194,7 +194,7 @@ export function EclipseChip({ className, ...props }: BadgeProps) {
 
 export function VimChip({ className, ...props }: BadgeProps) {
     return (
-        <BaseChip className={cn("chip-vim", className)} {...props}>vim</BaseChip>
+        <BaseChip className={cn("chip-vim", className)} {...props}>Vim</BaseChip>
     )
 }
 

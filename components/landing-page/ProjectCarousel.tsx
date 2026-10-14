@@ -121,7 +121,7 @@ export default function ProjectCarousel({ className, ...props }: React.Component
                                 <p>
                                     Mobile game developed in a team of four (including myself) for a university-hosted hackathon. This was my first hackathon experience, which was both nerve-wracking and exciting at the same time. But I had a lot of fun and I learned a lot, both about using Godot effectively and efficiently working in a team.
                                 </p>
-                                <img className={`${carouselCardImageBaseClass} card-image-border mt-[1rem] mb-[1rem]`} src="/project/moonwalk-the-plank/moonwalk-home.png" />
+                                <img className={`${carouselCardImageBaseClass} card-image-border mt-auto mb-auto`} src="/project/moonwalk-the-plank/moonwalk-home.png" />
                                 <div className="card-tool-list-base">
                                     <div>Built with: </div>
                                     <GodotChip className="chip-small mt-2 mr-2" />
