@@ -131,6 +131,8 @@ figcaption {
     text-align: right;
     /* background-color: var(--color-secondary); */
     padding-right: 1rem;
+    transform: translateX(50%);
+    opacity: 0;
 }
 
 #hero-header {
@@ -334,7 +336,9 @@ figcaption {
 
 .title-enter {
     /* opacity: 0; */
-    animation: titleEnter var(--anim-preset)
+    animation: titleEnter 1.5s ease-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes aboutPhotoEnter {

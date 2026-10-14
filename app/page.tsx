@@ -101,11 +101,11 @@ export default function LandingPage() {
                 </p>
                 <p className="subtitle underline">Want to see what I've worked on?</p>
                 <p>
-                  Check out my <a href="https://github.com/1bucket" target="_blank">GitHub<ExternalLinkIcon /></a>. Or, you can click <a href="#projects">here</a> to check out my projects!
+                  Check out my <a href="https://github.com/1bucket" target="_blank">GitHub<ExternalLinkIcon /></a>. Or, you can click <a href="#projects">here</a> to check out my projects.
                 </p>
                 <p className="subtitle underline">Interested in talking?</p>
                 <p>
-                  You can write me a message on <a href="https://www.linkedin.com/in/paul-enrade-8432682b1/" target="_blank">LinkedIn<ExternalLinkIcon /></a>, or you can write a message <a href="#contact">here</a> as well!
+                  You can write me a message on <a href="https://www.linkedin.com/in/paul-enrade-8432682b1/" target="_blank">LinkedIn<ExternalLinkIcon /></a>, or you can write a message <a href="#contact">here</a> as well.
                 </p>
               </div>
               <figure id="fig-photo-me">
