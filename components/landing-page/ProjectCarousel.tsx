@@ -74,7 +74,7 @@ export default function ProjectCarousel({ className, ...props }: React.Component
                             </CardHeader>
                             <CardContent className={`${carouselCardDescBaseClass}`}>
                                 <p>
-                                    A small (for now) arcade style game — bounce against surfaces to gain score, but be wary of the energy gauge and stay within a stable range! I got to apply some newly-acquired knowledge about component-based programming and software design in general.
+                                    A small (for now) arcade style game — bounce against surfaces to gain score, but be wary of the energy gauge and stay within a stable range! I got to apply some newly-acquired knowledge about component-based programming and general software design to ensure I'd be able to add to this project in the future without having to reorganize everything.
                                 </p>
                                 <img className={`${carouselCardImageBaseClass} card-image-border-sideless mt-auto mb-auto`} src="/project/stay-bouncy/sb-placeholder.png" />
                                 <div className="card-tool-list-base">
@@ -93,7 +93,7 @@ export default function ProjectCarousel({ className, ...props }: React.Component
                             <CardHeader id="project-card-weschedule-header" className={`${carouselCardHeaderBaseClass}`}><h5>Weschedule</h5></CardHeader>
                             <CardContent className={`${carouselCardDescBaseClass} project-card-weschedule-content`}>
                                 <p>
-                                    Event planning web app which was developed over two semesters by a team of six (including myself) under the mentorship of another computer science student.
+                                    Event planning web app developed over two semesters by a team of six under the mentorship of another student. I utilized React state management when building the event creation form and cultivated friendly, collaborative relationships with my teammates.
                                 </p>
                                 <img className={`${carouselCardImageBaseClass} card-image-border-sideless mt-auto mb-auto`} src="/project/weschedule/weschedule-landing.png" />
                                 <div className="card-tool-list-base">
@@ -102,7 +102,7 @@ export default function ProjectCarousel({ className, ...props }: React.Component
                                     <VercelChip className="chip-small mr-2 mt-2" />
                                     <ReactChip className="chip-small mt-2 mr-2" />
                                     <TSChip className="chip-small mt-2 mr-2" />
-                                    <TailwindChip className="chip-small mr-2 mt-2" />
+                                    {/* <TailwindChip className="chip-small mr-2 mt-2" /> */}
                                     <SupabaseChip className="chip-small mr-2 mt-2" />
                                 </div>
                             </CardContent>
@@ -196,7 +196,7 @@ export default function ProjectCarousel({ className, ...props }: React.Component
                             <CardHeader className={`${carouselCardHeaderBaseClass}`}><h5>Quatience</h5></CardHeader>
                             <CardContent className={`${carouselCardDescBaseClass} project-crad-quatience-content`}>
                                 <p>
-                                    A high school assignment turned impromptu passion project, this game aims to combine elements of Geometry Dash and the Google Chrome dinosaur game to create a more engaging side-scroller experience.
+                                    A high school assignment turned impromptu passion project, this game aims to combine elements of Geometry Dash and the Google Chrome dinosaur game to create a more engaging side-scroller experience. This was my first relatively large project, which exercised the way I think about all the moving parts that come together to make this game.
                                 </p>
                                 <img className={`${carouselCardImageBaseClass} card-image-border mt-auto mb-auto`} src="/project/quatience/quatience-gameplay-1.png" />
                                 <div className="card-tool-list-base">
